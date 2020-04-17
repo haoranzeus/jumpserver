@@ -185,7 +185,7 @@ def get_start_gunicorn_kwargs():    # 获取gunicorn的启动命令和应用路�
     log_format = '%(h)s %(t)s "%(r)s" %(s)s %(b)s '
 
     cmd = [
-        'gunicorn', 'jumpserver.wsgi',
+        'gunicorn', 'jumpserver.wsgi',   # apps/jumpserver/wsgi.py
         '-b', bind,
         '-k', 'gthread',
         '--threads', '10',
